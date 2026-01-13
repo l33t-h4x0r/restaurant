@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(116, 116, 116);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+    margin: 30px;
+}
+button {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(207, 135, 0);
+    color: white;
+    padding: 10px;
+}
+
+#headline {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 2px rgb(207, 135, 0);
+    margin-bottom: 10px;
+}
+
+#text {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+    
+}
+
+img {
+    width: 200px;
+}
