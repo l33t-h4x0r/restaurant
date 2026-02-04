@@ -1,36 +1,196 @@
+/* a downloaded font, must(?) be put at the top */
+@font-face {
+    font-family: 'Ranchers';
+    src: url('fonts/Ranchers-Regular.woff2') format('woff2'),
+        url('fonts/Ranchers-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/***********/
+/* GENERAL */
+/***********/
+:root {
+    --text: rgb(242, 228, 210);
+    --dark-bg: rgb(44, 41, 39);
+    --light-bg: rgb(67, 61, 56);
+}
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
-    background-color: rgb(116, 116, 116);
+    background-color: var(--dark-bg);
 }
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 7%;
-    margin: 30px;
-}
-button {
-    font-size: 20px;
-    font-weight: bold;
-    background-color: rgb(207, 135, 0);
-    color: white;
-    padding: 10px;
-}
-
-#headline {
+.title {
+    font-family: "Ranchers";
     font-size: 50px;
-    font-weight: bold;
     color: white;
     text-shadow: 3px 3px 2px rgb(207, 135, 0);
     margin-bottom: 10px;
 }
 
+/**********/
+/* NAV BAR*/
+/**********/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-bg);
+}
+button {
+    font-family: "Ranchers";
+    font-size: 32px;
+    background-color: var(--dark-bg);
+    color: var(--text);
+    padding: 10px 100px 10px 100px;
+    border-radius: 30px 30px 0px 0px;
+    border: none;
+    border-bottom: 2px solid var(--text);
+
+}
+.clicked {
+    border: 2px solid var(--text);
+    border-bottom: none;
+    color: var(--text);
+    border-color: var(--text);
+}
+.sideSpacer {
+    border-bottom: 2px solid var(--text);
+    flex-grow: 1;
+}
+.middleSpacer {
+    border-bottom: 2px solid var(--text);
+    width: 7%;
+    flex-grow: 0;
+
+}
+
+/*************/
+/* HOME PAGE */
+/*************/
 #text {
     font-size: 30px;
     color: white;
-    margin-bottom: 10px;
+}
+#headline {
+    font-size: 100px;
+    width: 40%;
+    margin-bottom: 30px;
+}
+#homePage {
+    display: flex;
+    gap: 50px;
+    margin-top: 100px;
+}
+#hoursList {
+    color: var(--text);
+    font-size: 30px;
+}
+#homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#info {
+    display: flex;
+    gap: 300px;
+    margin-top: 100px;
+}
+ul {
+    list-style-type: none;
+}
+#address {
+    color: var(--text);
+    font-size: 30px;
+}
+/********/
+/* MENU */
+/********/
+#menuPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+.menuItem {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    width: 50%;
+    margin: 20px;
+    padding: 25px;
+    display: flex;
+}
+.menuImage {
+    background-color: var(--light-bg);
+    width: 100px;
+}
+.menuName {
+    color: var(--text);
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    width: 80%;
+}
+.imageWrapper {
+    padding: 15px;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+.menuLeft {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.menuRight {
+    margin: 15px;
+    color: var(--text);
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+/***********/
+/* CONTACT */
+/***********/
+
+#chefTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#chefList {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.chef {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text);
+    background-color: var(--light-bg);
+    font-size: 32px;
+    padding: 20px 0px 20px 0px;
+}
+
+.chefPicWrapper {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
     
 }
 
-img {
-    width: 200px;
+.chefPic {
+    height: 350px;
+    border-radius: 0% 0% 40% 40%;
 }
